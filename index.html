@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, user-scalable=no">
-    <title>Document</title>
+    <title>Traveller Thoughts</title>
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap"
         rel="stylesheet">
 
@@ -38,6 +38,9 @@
         <span class="intro-title">
             Traveller Thoughts
         </span>
+        <div class="svg-right-bottom">
+            <img src="./images/traveller-2.png" alt="">
+        </div>
 
     </div>
 
@@ -66,17 +69,19 @@
                 </a>
             </div>
         </div>
-        <div class="image-content-wrapper-4 img-main-wrappe2">
-            <div class="image-wrapper"><img src="./images/mardi.png" alt="Mardi"></div>
-            <a href="image-single.html" class="image-title">
-                Mardi Himal <small><sup>(5)</sup></small>
-            </a>
-        </div>
-        <div class="image-content-wrapper-5 img-main-wrappe2">
-            <div class="image-wrapper"><img src="./images/kalinchok.png" alt="Mardi"></div>
-            <a href="image-single.html" class="image-title image-title-right">
-                Kalinchok <small><sup>(5)</sup></small>
-            </a>
+        <div class="second-timeline-wrapper">
+            <div class="image-content-wrapper-4 img-main-wrappe2">
+                <div class="image-wrapper"><img src="./images/mardi.png" alt="Mardi"></div>
+                <a href="image-single.html" class="image-title">
+                    Mardi Himal <small><sup>(5)</sup></small>
+                </a>
+            </div>
+            <div class="image-content-wrapper-5 img-main-wrappe2">
+                <div class="image-wrapper"><img src="./images/kalinchok.png" alt="Mardi"></div>
+                <a href="image-single.html" class="image-title image-title-right">
+                    Kalinchok <small><sup>(5)</sup></small>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -102,7 +107,7 @@
             scrollTrigger: {
                 trigger: '.image-new-wrapper',
                 scrub: true,
-                markers: true,
+                // markers: true,
                 end: "bottom 55%",
                 // start: "top 95%"
             }
@@ -115,26 +120,26 @@
                 y: -150,
                 ease: "none",
 
-            })
-        // const tl2 = gsap.timeline2({
+            });
+
+        // const tl2 = gsap.timeline({
         //     scrollTrigger: {
-        //         trigger: '.img-main-wrapper2',
+        //         trigger: '.second-timeline-wrapper',
         //         scrub: true,
-        //         // markers: true,
-        //         // start: "top 95%"
+        //         markers: true,
+        //         start: "top 105%"
         //     }
         // })
-
-        //     .to('.image-content-wrapper-4', {
+        //     .to('.second-timeline-wrapper', {
         //         y: -400,
         //         scrub: 2,
         //         ease: "none"
         //     })
         //     .to('.image-content-wrapper-5', {
-        //         y: -200,
+        //         y: -100,
         //         scrub: 3,
         //         ease: "none"
-        //     })
+        //     });
 
     </script>
 
