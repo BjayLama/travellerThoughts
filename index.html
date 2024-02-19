@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <title>Document</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/noise.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="raster-bg" style="opacity: 1;">
+        <div class="h-raster-v rv1"></div>
+        <div class="h-raster-v rv2"></div>
+        <div class="h-raster-v rv3"></div>
+        <div class="h-raster-v rv4"></div>
+        <div class="h-raster-v rv5"></div>
+        <div class="h-raster-v rv6"></div>
+        <div class="h-raster-v rv7"></div>
+        <div class="h-raster-v rv8"></div>
+        <div class="h-raster-v rv9"></div>
+        <div class="h-raster-v rv10"></div>
+        <div class="h-raster-v rv11"></div>
+    </div>
+
+    <div class="intro-section">
+        <sapn class="small-title text-center" data-lenis-prevent>
+            Welcome to
+        </sapn>
+        <span class="intro-title">
+            Traveller Thoughts
+        </span>
+
+    </div>
+
+
+    <div class="image-sections">
+
+        <div class="image-content-wrapper">
+            <div class="image-wrapper"><img src="./images/gosaikunda.png" alt="Gosaikunda"></div>
+            <a href="image-single.html" class="image-title">
+                GOSAIKUNDA <small><sup>(5)</sup></small>
+            </a>
+        </div>
+        <div class="image-new-wrapper">
+            <div class="image-content-wrapper-2 img-main-wrapper">
+                <div class="image-wrapper"><img src="./images/pokhara.png" alt="pokhara"></div>
+                <a href="image-single.html" class="image-title image-title-right">
+                    pokhara - ghandruk <small>(5)</small>
+                </a>
+            </div>
+            <div class="image-content-wrapper-3 img-main-wrapper">
+                <div class="image-wrapper">
+                    <img src="./images/nagarkot.png" alt="pokhara">
+                </div>
+                <a href="image-single.html" class="image-title">
+                    Nagarkot <small>(5)</small>
+                </a>
+            </div>
+        </div>
+        <div class="image-content-wrapper-4 img-main-wrappe2">
+            <div class="image-wrapper"><img src="./images/mardi.png" alt="Mardi"></div>
+            <a href="image-single.html" class="image-title">
+                Mardi Himal <small><sup>(5)</sup></small>
+            </a>
+        </div>
+        <div class="image-content-wrapper-5 img-main-wrappe2">
+            <div class="image-wrapper"><img src="./images/kalinchok.png" alt="Mardi"></div>
+            <a href="image-single.html" class="image-title image-title-right">
+                Kalinchok <small><sup>(5)</sup></small>
+            </a>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000)
+        });
+
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.image-new-wrapper',
+                scrub: true,
+                markers: true,
+                end: "bottom 55%",
+                // start: "top 95%"
+            }
+        })
+            .to('.image-new-wrapper', {
+                y: -180,
+                ease: "none",
+            })
+            .to('.image-content-wrapper-3', {
+                y: -150,
+                ease: "none",
+
+            })
+        // const tl2 = gsap.timeline2({
+        //     scrollTrigger: {
+        //         trigger: '.img-main-wrapper2',
+        //         scrub: true,
+        //         // markers: true,
+        //         // start: "top 95%"
+        //     }
+        // })
+
+        //     .to('.image-content-wrapper-4', {
+        //         y: -400,
+        //         scrub: 2,
+        //         ease: "none"
+        //     })
+        //     .to('.image-content-wrapper-5', {
+        //         y: -200,
+        //         scrub: 3,
+        //         ease: "none"
+        //     })
+
+    </script>
+
+</body>
+
+</html>
